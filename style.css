@@ -1,0 +1,145 @@
+/* Setup */
+body {
+    margin: 0;
+}
+
+/* Typography */
+
+@font-face {
+    font-family: "roc-grotesk-condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    src: src;
+}
+
+@font-face {
+    font-family: "input-serif", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    src: src;
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: src;
+}
+
+h1 {
+    font-family: input-serif;
+    font-size: 60px;
+    line-height: 66px;
+    letter-spacing: -0.05em;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-transform: sentence-case;
+}
+
+h2 {
+    font-family: input-serif;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+    max-width: 500px;
+}
+
+h3 {
+    font-family: roc-grotesk-condensed;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+p {
+    font-family: inter;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    max-width: 500px;
+    color: #808080;
+    margin-bottom: 48px;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    color: #808080;
+}
+
+.m-b0 {
+    margin-bottom: 0;
+}
+
+/* Section Coding */
+.title {
+    background-color: #0073ae;
+    padding: 90px 10% 30px 10%;
+}
+
+.full-width video {
+    width: 100%;
+}
+
+.full-width img {
+    width: 100%;
+}
+
+.text-layout {
+    padding-top: 131px;
+    padding-bottom: 131px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #F5F5F5;
+    padding: 9px 18px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #0073ae;
+    color: white;
+    font-family: inter;
+    font-size: 18px;
+    padding: 18px 32px;
+    border: none;
+    border-radius: 10px;
+    margin: auto 0;
+}
+
+button:hover {
+    background-color: #005d8b;
+    transition: 300ms;
+    transform: scale(1.05, 1.05);
+}
+
+button:active {
+    background-color: #00557f;
+    transition: 100ms;
+    transform: scale(1.03, 1.03);
+}
+
+.more-info {
+    display: flex;
+    justify-content: center;
+}
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 50px;
+}
