@@ -50,6 +50,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
     margin: 0;
+    min-width: 400px;
+}
+
+* {
+    outline: 1px solid red;
 }
 
 /* Typography */
@@ -91,6 +96,7 @@ h2 {
     line-height: 40px;
     letter-spacing: -0.05em;
     max-width: 500px;
+    margin-bottom: 15px;
 }
 
 h3 {
@@ -123,23 +129,23 @@ p {
     margin-bottom: 0;
 }
 
+.center-align {
+    text-align: center;
+}
+
 /* Section Coding */
 .title {
     background-color: #0073ae;
     padding: 90px 10% 30px 10%;
 }
 
-.full-width video {
-    width: 100%;
-}
-
-.full-width img {
+.full-width {
     width: 100%;
 }
 
 .text-layout {
-    padding-top: 131px;
-    padding-bottom: 131px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding-left: 10%;
     padding-right: 10%;
 }
