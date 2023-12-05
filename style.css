@@ -53,9 +53,9 @@ body {
     min-width: 400px;
 }
 
-* {
-    outline: 1px solid red;
-}
+/** {
+     outline: 1px solid red;
+}*/
 
 /* Typography */
 
@@ -197,4 +197,53 @@ button:active {
     flex-direction: column;
     align-items: center;
     margin: 10% 50px;
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 71px;
+    margin: 20px;
+}
+
+nav h1 {
+    font-size: 38px;
+    line-height: 100%;
+    color: #1F2BC9;
+    margin-bottom: 10px;
+}
+
+nav h3 {
+    font-size: 28px;
+    line-height: 100%
+}
+
+nav button {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+}
+
+nav button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-brand-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 30px;
 }
