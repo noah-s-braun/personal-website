@@ -241,7 +241,7 @@ nav h3 {
 nav button {
     background-color: transparent;
     color: black;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 nav button:hover, nav .material-symbols-outlined:hover {
@@ -266,6 +266,10 @@ nav button:hover, nav .material-symbols-outlined:hover {
     font-size: 48px;
     cursor: pointer;
     display: none;
+}
+
+.material-symbols-outlined.close-icon {
+    padding: 16px;
 }
 
 .nav-mobile-menu {
@@ -316,5 +320,20 @@ nav button:hover, nav .material-symbols-outlined:hover {
 
     .material-symbols-outlined.menu-icon {
         display: block;
+    }
+}
+
+@media (min-width: 500px) {
+
+    .nav-buttons {
+        display: flex;
+    }
+
+    .material-symbols-outlined.menu-icon {
+        display: none;
+    }
+
+    .nav-mobile-menu {
+        display: none;
     }
 }
