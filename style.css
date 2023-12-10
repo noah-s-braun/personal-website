@@ -110,7 +110,7 @@ h3 {
     font-size: 30px;
     line-height: 105%;
     letter-spacing: 0.05em;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     margin-top: 10px;
 }
 
@@ -174,7 +174,6 @@ p {
 }
 
 button {
-    background-color: #0073ae;
     color: white;
     font-family: inter;
     font-size: 18px;
@@ -184,15 +183,25 @@ button {
     margin: auto 0;
 }
 
-button:hover, .material-symbols-outlined:hover {
+.cta-button {
+    background-color: #0073ae;
+}
+
+.cta-button:hover {
     background-color: #005d8b;
+}
+
+.cta-button:active {
+    background-color: #00557f;
+}
+
+button:hover, .material-symbols-outlined:hover {
     transition: 300ms;
     transform: scale(1.05, 1.05);
     cursor: pointer;
 }
 
 button:active, .material-symbols-outlined:active {
-    background-color: #00557f;
     transition: 100ms;
     transform: scale(1.03, 1.03);
 }
@@ -298,8 +307,52 @@ nav button:hover, nav .material-symbols-outlined:hover {
     padding-right: 30px;
 }
 
+/* Footer */
 
+footer {
+    padding: 72px 18px;
+}
+footer, footer a {
+    background-color: #1F2BC9;
+    color: white;
+    font-size: 18px;
+    font-family: inter;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-contact-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 2px solid white;
+    padding-left: 18px;
+}
+
+.material-symbols-outlined.email-icon, .material-symbols-outlined.call-icon {
+    font-size: 24px;
+}
+
+.footer-contact-info {
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    padding-right: 36px;
+    padding-bottom: 18px;
+}
+
+.call-icon:hover, .call-icon:active {
+    transform: none;
+    cursor: auto;
+}
+
+/* Breakpoints */
 @media (max-width: 500px) {
+    /* Nav */
     nav h1 {
         font-size: 24px;
     }
@@ -321,10 +374,27 @@ nav button:hover, nav .material-symbols-outlined:hover {
     .material-symbols-outlined.menu-icon {
         display: block;
     }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .footer-contact-info-container {
+        border-left: none;
+        padding: 0px 0px;
+    }
+
+    footer img {
+        padding-left: 6px;
+    }
 }
 
 @media (min-width: 500px) {
-
+    /* Nav */
     .nav-buttons {
         display: flex;
     }
