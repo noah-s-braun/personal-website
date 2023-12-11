@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Work | Modern Careers Page</title>
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/personal-website/global-style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -21,7 +23,7 @@
 
         <nav>
             <div class="nav-brand-info">
-                <img src="images/Noah-Pencil-Logo.svg">
+                <img src="/personal-website/images/Noah-Pencil-Logo.svg" alt="N Pencil Logo">
                 <div>
                     <h1>Noah Braun</h1>
                 </div>
@@ -31,7 +33,9 @@
                     <span class="material-symbols-outlined close-icon" onclick="closeMobileMenuPopup()">
                     close
                     </span>
-                    <button>Work</button>
+                    <a href="/personal-website/work/index.html">
+                        <button>Work</button>
+                    </a>
                     <button>Contact</button>
                 </div>
                 <span class="material-symbols-outlined menu-icon" id="nav-mobile-menu" onclick="openMobileMenuPopup();">
@@ -108,7 +112,7 @@
         </div>
 
         <footer>
-            <img src="images/Noah-Pencil-Logo-White.svg" alt="N Pencil Logo" class=""></img>
+            <img src="/personal-website/images/Noah-Pencil-Logo-White.svg" alt="N Pencil Logo" class=""></img>
             <div class="footer-contact-info-container">
                 <div class="footer-contact-info footer-contact-info-email">
                     <a href="mailto:imaginoah@icloud.com">
@@ -129,17 +133,6 @@
             </div>
         </footer>
 
-        <script href="script.js" type="text/javascript">
-                function openMobileMenuPopup() {
-                    document.getElementById('nav-mobile-menu-popup').style.display = 'flex';
-                    document.getElementById('nav-mobile-menu').style.opacity = '0';
-                    document.getElementById('nav-mobile-menu').style.transition = '0ms';
-                }
-                function closeMobileMenuPopup() {
-                    document.getElementById('nav-mobile-menu-popup').style.display = 'none';
-                    document.getElementById('nav-mobile-menu').style.opacity = '1';
-                    document.getElementById('nav-mobile-menu').style.transition = '200ms';
-                }
-        </script>
+        <script src="/personal-website/script.js"></script>
     </body>
 </html>
