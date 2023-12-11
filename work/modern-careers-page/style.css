@@ -1,0 +1,15 @@
+.cta-button {
+    background-color: #0073ae;
+}
+
+.cta-button:hover {
+    background-color: #005d8b;
+}
+
+.cta-button:active {
+    background-color: #00557f;
+}
+
+.title {
+    background-color: #0073ae;
+}
