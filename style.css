@@ -1,0 +1,31 @@
+.work-cards-container {
+    margin: 0 auto;
+    padding: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 750px;
+    /*outline: 1px solid;*/
+    margin-bottom: 36px;
+}
+
+.work-card {
+    /*outline: 1px solid;*/
+    min-height: 100px;
+    min-width: 250px;
+    max-width: 475px;
+    margin: 12px 12px;
+    padding: 18px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.work-card:hover {
+    transform: scale(1.01);
+    transition: 300ms;
+    filter: drop-shadow(16px 16px 20px rgba(0, 0, 0, 0.2));
+}
+
+.work-card:hover p {
+    text-decoration: underline;
+}
