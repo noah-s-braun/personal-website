@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>Home | By Noah Scott Braun</title>
-        <link rel="icon" type="image/x-icon" href="https://noahscottbraun.com/images/Noah-Pencil-Logo.svg">
+        <meta name="description" content="Read case studies from designer Noah Scott Braun. Learn how user experience, user interface, product design, web development, and graphic design can enhance problem-solving."/>
+        <meta name="author" content="Noah Scott Braun">
+        <meta name="robots" content="index, follow">
 
-        <link rel="stylesheet" href="https://noahscottbraun.com/global-style.css">
-        <link rel="stylesheet" href="https://noahscottbraun.com/style.css">
+        <link rel="icon" type="image/svg+xml" href="images/Noah-Pencil-Logo.svg">
+        <link rel="icon" href="images/Noah-Pencil-Logo.ico">
+
+        <base href="https://noahscottbraun.com/">
+
+        <!-- Accessibility -->
+        <link rel="home" title="Noah Scott Braun Home" href="index.html">
+        <link rel="down" title="Case Study: Modern Careers Page" href="modern-careers-page/index.html">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="global-style.css">
+        <link rel="stylesheet" href="style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,58 +30,34 @@
             @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
         </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     </head>
     <body>
 
         <nav>
-            <div class="nav-brand-info">
-                <img src="https://noahscottbraun.com/images/Noah-Pencil-Logo.svg" alt="N Pencil Logo">
-                <div>
-                    <h1>Noah Braun</h1>
-                </div>
-            </div>
-            <div class="nav-mobile-menu">
-                <div class="nav-mobile-menu-popup" id="nav-mobile-menu-popup">
-                    <span class="material-symbols-outlined close-icon" onclick="closeMobileMenuPopup()">
-                    close
-                    </span>
-                    <a href="https://noahscottbraun.com/index.html">
-                        <button>Work</button>
-                    </a>
-                    <!-- <button>Contact</button> -->
-                </div>
-                <span class="material-symbols-outlined menu-icon" id="nav-mobile-menu" onclick="openMobileMenuPopup();">
-                    menu
-                </span>
-                
-            </div>
-            <div class="nav-buttons">
-                
-                <a href="https://noahscottbraun.com/index.html">
-                    <button>Work</button>
-                </a>
-                <!-- <button>Contact</button> -->
-            </div>
+            <a class="header-logo" href="index.html"> <img src="images/Noah-Pencil-Logo.svg" alt="N Pencil Logo"> </a>
+            <a class="button-primary button-small" href="index.html">Home</a>
         </nav>
 
-        <article class="work-cards-container">
-            <a class="no-link-styles" href="https://noahscottbraun.com/modern-careers-page/index.html">
-                <div class="work-card">
-                    <img src="https://noahscottbraun.com/images/modern-careers-page.jpg" alt="simply and cleanly designed website layouts">
-                    <h6 class="secondary">User Interface • User Experience • Web Development</h6>
-                    <h4>Modern Careers Page</h4>
-                    <p class="medium">View case study ></p>
+        <article>
+            <h1 class="page-title">Case Studies</h1>
+            <div class="work-cards-container">
+                <div class="card card-work">
+                    <div class="card-background"></div>
+                    <img src="images/modern-careers-page.jpg" alt="simply and cleanly designed website layouts">
+                    <ul class="skills-list">
+                        <li>User Interface</li>
+                        <li>User Experience</li>
+                        <li>Web Development</li>
+                    </ul>
+                    <h2>Modern Careers Page</h2>
+                    <a href="modern-careers-page/index.html" class="button-primary button-small">Read case study</a>
                 </div>
-            </a>
+            </div>
         </article>
 
-        <!-- <div class="title">
-            <h2>This page is in progress.</h2>
-            <p class="m-b30">Check out <a href="https://noahscottbraun.com/work/modern-careers-page">this case study</a> instead</p>
-        </div> -->
-
         <footer>
-            <img src="https://noahscottbraun.com/images/Noah-Pencil-Logo-White.svg" alt="N Pencil Logo" class=""></img>
+            <img src="images/Noah-Pencil-Logo-White.svg" alt="N Pencil Logo" class=""></img>
             <div class="footer-contact-info-container">
                 <div class="footer-contact-info footer-contact-info-email">
                     <span class="material-symbols-outlined email-icon">
@@ -84,6 +73,6 @@
                 </div>
             </div>
         </footer>
-        <script src="https://noahscottbraun.com/script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
