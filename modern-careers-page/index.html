@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Noah Braun | Modern Careers Page</title>
-        <link rel="icon" type="image/x-icon" href="https://noahscottbraun.com//images/Noah-Pencil-Logo.svg">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Modern Careers Page | a Case Study by Noah Scott Braun</title>
+        <meta name="description" content="Essex Industries makes critical parts for aircraft across the globe—which means they need the best of the best working for them. In order to attract top talent, they needed a robust careers page that showcased their welcoming, family-based culture."/>
+        <meta name="author" content="Noah Scott Braun">
+        <meta name="robots" content="index, nofollow">
 
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://noahscottbraun.com//global-style.css">
+        <link rel="icon" type="image/svg+xml" href="images/Noah-Pencil-Logo.svg">
+        <link rel="icon" href="images/Noah-Pencil-Logo.ico">
+
+        <base href="https://noahscottbraun.com/">
+
+        <!-- Accessibility -->
+        <link rel="home" title="Noah Scott Braun Home" href="index.html">
+        <link rel="up" title="Noah Scott Braun Home" href="index.html">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="global-style.css">
+        <link rel="stylesheet" href="modern-careers-page/style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Adobe Fonts Import-->
         <link rel="stylesheet" href="https://use.typekit.net/jiy4ddc.css">
-        
+
         <!-- Google Fonts Import-->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
@@ -23,99 +36,79 @@
     <body>
 
         <nav>
-            <div class="nav-brand-info">
-                <img src="https://noahscottbraun.com//images/Noah-Pencil-Logo.svg" alt="N Pencil Logo">
-                <div>
-                    <h1>Noah Braun</h1>
-                </div>
-            </div>
-            <div class="nav-mobile-menu">
-                <div class="nav-mobile-menu-popup" id="nav-mobile-menu-popup">
-                    <span class="material-symbols-outlined close-icon" onclick="closeMobileMenuPopup()">
-                    close
-                    </span>
-                    <a href="https://noahscottbraun.com//index.html">
-                        <button>Work</button>
-                    </a>
-                    <!-- <button>Contact</button> -->
-                </div>
-                <span class="material-symbols-outlined menu-icon" id="nav-mobile-menu" onclick="openMobileMenuPopup();">
-                    menu
-                </span>
-                
-            </div>
-            <div class="nav-buttons">
-                
-                <a href="https://noahscottbraun.com//index.html">
-                    <button>Work</button>
-                </a>
-                <!-- <button>Contact</button> -->
-            </div>
+            <a class="header-logo" href="index.html"> <img src="images/Noah-Pencil-Logo.svg" alt="N Pencil Logo"> </a>
+            <a class="button-primary button-small" href="index.html">Home</a>
+            <p class="breadcrumb-divider">/</p>
+            <p class="breadcrumb">Modern Careers Page</p>
         </nav>
 
-        <div class="title">
-            <h3 class="white">Essex Industries</h3>
-            <h1 class="white">Modern Careers Page</h1>
+        <div class="title-section">
+            <p>Essex Industries</p>
+            <h1>Modern Careers Page</h1>
+            <ul class="skills-list">
+                <li>User Experience Design</li>
+                <li>User Interface Design</li>
+                <li>Web Development</li>
+            </ul>
         </div>
 
-        <div class="full-width">
+        <div class="article-image card">
+            <div class="card-background"></div>
             <video autoplay muted playsinline diablepictureinpicture loop alt="webpage design evolves from wireframe sketch to low-fidelity to interactive full-color">
-                <source src="images/EssexCareersPage_OverviewVideo.mp4" type="video/mp4">
+                <source src="modern-careers-page/images/EssexCareersPage_OverviewVideo.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="text-layout">
             <h2>A Manufacturing Company with a Culture to Brag About</h2>
             <p>Essex Industries makes critical parts for aircraft across the globe—which means they need the best of the best working for them. In order to attract top talent, they needed a robust careers page that showcased their welcoming, family-based culture.</p>
-            <h3>Skills</h3>
-            <div class="skills-list">
-                <p class="skill">User Experience Design</p>
-                <p class="skill">User Interface Design</p>
-                <p class="skill">Web Development</p>
-                <p class="skill">Marketing Strategy</p>
-            </div>
         </div>
 
         <div class="text-layout">
-            <h2>Crafting a clear user experience</h2>
+            <h2><span class="article-number">1</span>Crafting a clear user experience</h2>
             <p>Essex’s previous careers page, while functional, lacked a clear information flow. I organized the already existing sections into an intuitive progression—sharing who Essex is as an employer (culture, values, mission) before showing page users how they might fit in the company (available roles, employee testimonials.)</p>
         </div>
-        <div class="full-width">
-            <img src="images/EssexCareersPage_Image1.png" alt="detailed sketch of webpage wireframe and flow">
+        <div class="article-image card">
+            <div class="card-background"></div>
+            <img src="https://noahscottbraun.com/modern-careers-page/images/EssexCareersPage_Image1.png" alt="detailed sketch of webpage wireframe and flow">
         </div>
 
         <div class="text-layout">
-            <h2>The Interface-Lift</h2>
+            <h2><span class="article-number">2</span>The Interface-Lift</h2>
             <p>Created to appeal to serious military contractors, Essex’s brand is bare bones. However, I pushed the interface design in a (slightly) more fun direction for this page to give prospective employees an engaging experience featuring colorful and smooth animations.</p>
         </div>
-        <div class="full-width">
-            <img src="images/EssexCareersPage_Image2.png" alt="cleanly-designed webpage layouts for culture, values, benefits, and testimonials">
+        <div class="article-image card">
+            <div class="card-background"></div>
+            <img src="https://noahscottbraun.com/modern-careers-page/images/EssexCareersPage_Image2.png" alt="cleanly-designed webpage layouts for culture, values, benefits, and testimonials">
         </div>
 
         <div class="text-layout">
-            <h2>Building the Page</h2>
+            <h2><span class="article-number">3</span>Building the Page</h2>
             <p>Essex’s website is managed entirely with WordPress, which made writing custom code a challenge, but after some trial and error, I discovered how to incorporate the three web languages (HTML, CSS, and JavaScript) into the page. This allowed me to build the complex interactions I imagined during the design stage.</p>
-            <div class="full-width">
-                <video autoplay muted playsinline diablepictureinpicture loop alt="testimonials smoothly animate to expand and collapse when clicked">
-                    <source src="images/EssexCareersPage_Image3.mp4" type="video/mp4">
-                </video>
+        </div>
+        <div class="article-image card">
+            <div class="card-background"></div>
+            <video autoplay muted playsinline diablepictureinpicture loop alt="testimonials smoothly animate to expand and collapse when clicked">
+                <source src="/modern-careers-page/images/EssexCareersPage_Image3.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="conclusion">
+            <div>
+                <p class="conclusion-note">
+                    Dear Essex Industries, </br>
+                    Thank you for being trusting and encouraging throughout this process. </br>
+                    <span class="conclusion-signature">Sincerely, Noah</span>
+                </p>
             </div>
-        </div>
-
-        <div class="more-info">
-            <a href="https://essexindustries.com/careers" target="_blank">
-                <button class="cta-button">View the Webpage</button>
-            </a>
-        </div>
-
-        <div class="thank-you">
-            <h2 class="center-align m-b0">Thank you, Essex</h2>
-            <h3 class="gray center-align m-b30">For being trusting and encouraging throughout this whole process.</h3>
-            <p class="center-align">Sincerely, Noah</p>
+            <div class="conclusion-buttons">
+                <!-- <a class="button-primary button-small" href="https://essexindustries.com/careers" target="_blank">Hire Me</a> -->
+                <a class="button-primary button-small" href="https://essexindustries.com/careers" target="_blank">View Live Page</a>
+            </div>
         </div>
 
         <footer>
-            <img src="https://noahscottbraun.com//images/Noah-Pencil-Logo-White.svg" alt="N Pencil Logo" class=""></img>
+            <img src="images/Noah-Pencil-Logo-White.svg" alt="N Pencil Logo" class=""></img>
             <div class="footer-contact-info-container">
                 <div class="footer-contact-info footer-contact-info-email">
                     <span class="material-symbols-outlined email-icon">
