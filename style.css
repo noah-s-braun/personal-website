@@ -1,5 +1,5 @@
 .work-cards-container {
-    margin: 0 10%;
+    margin: 0 var(--spacing-margin);
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: var(--spacing-l);
@@ -56,4 +56,8 @@ article {
     .work-card {
         width: 100%;
     }
+}
+
+@media (min-width: 450px) {
+    
 }

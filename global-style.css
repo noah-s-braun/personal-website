@@ -122,8 +122,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --spacing-xl: var(--spacing-6);
     --spacing-2xl: var(--spacing-9);
     --spacing-3xl: var(--spacing-13);
-    --spacing-desktop-margin: var(--spacing-3xl);
-    --spacing-mobile-margin: var(--spacing-m);
+    --spacing-margin: 10%;
 
     /* Radius */
     --radius-none: var(--spacing-0);
@@ -229,13 +228,11 @@ a {
 
     /* Buttons */
     a.button-primary, a.button-secondary {
-        cursor: pointer;
-        display: inline-block;
+        display: flex;
     }
 
     a.button-primary:hover, a.button-secondary:hover {
         cursor: pointer;
-        display: inline-block;
 
         animation-name: button-hover;
         animation-duration: 500ms;
@@ -278,6 +275,14 @@ a {
         line-height: 32px;
     }
 
+    .button-icon-start {
+        margin-right: var(--spacing-s);
+    }
+
+    .button-icon-end {
+        margin-left: var(--spacing-s);
+    }
+
     @keyframes button-hover {
         0% {
             transform: scale(1, 1)
@@ -313,18 +318,19 @@ a {
 
     /* Page Title */
     .page-title {
-        margin: 0 10%;
+        margin: 0 var(--spacing-margin);
     }
 
     /* Header */
     nav {
         height: var(--spacing-3xl);
         display: flex;
-        padding: 20px 10%;
+        padding: 20px var(--spacing-margin);
         position: sticky;
         top: 0;
         background-color: color-mix(in srgb, var(--surface-primary) 80%, #FFFFFF00 20%);
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         align-items: center;
         justify-content: flex-start;
         z-index: 100;
@@ -352,18 +358,12 @@ a {
         color: var(--text-secondary);
     }
 
-    nav .material-symbols-outlined:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-
     .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
     'opsz' 48;
-    padding: 0.25em;
-    border-radius: 0.2em;
     }
 
     /* Lists */ 
@@ -385,6 +385,7 @@ a {
         margin: 0 var(--spacing-xs) 6px 0;
         border-radius: var(--radius-m);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(15px);
     }
     
     .skills-list {
@@ -398,7 +399,7 @@ a {
 /* Title */
 .title-section {
     background-color: var(--surface-brand);
-    padding: 90px 10% 30px 10%;
+    padding: 90px var(--spacing-margin) 30px var(--spacing-margin);
 }
 
 .title-section h1, .title-section p, .title-section li {
@@ -420,8 +421,8 @@ a {
 .text-layout {
     margin-top: var(--spacing-3xl);
     margin-bottom: var(--spacing-xl);
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: var(--spacing-margin);
+    margin-right: var(--spacing-margin);
     max-width: 750px;
     position: relative;
 }
@@ -440,7 +441,7 @@ a {
 .conclusion {
     margin-bottom: var(--spacing-xl);
     border-top: 2px solid var(--border-primary);
-    margin: var(--spacing-3xl) 10%;
+    margin: var(--spacing-3xl) var(--spacing-margin);
     padding: var(--spacing-xl) 0;
     display: grid;
     grid-column-gap: var(--spacing-l);
@@ -468,6 +469,7 @@ a {
 
 footer {
     padding: 72px 18px;
+    position: relative;
 }
 
 footer, footer a {
@@ -489,13 +491,8 @@ footer, footer a {
     padding-left: 18px;
 }
 
-.material-symbols-outlined.email-icon, .material-symbols-outlined.call-icon {
-    font-size: 24px;
-}
-
-.footer-contact-info {
-    display: flex;
-    align-items: center;
+.footer-contact-info-container a {
+    margin-bottom: var(--spacing-s);
 }
 
 footer img {
@@ -503,9 +500,11 @@ footer img {
     padding-bottom: 18px;
 }
 
-.call-icon:hover, .call-icon:active {
-    transform: none;
-    cursor: auto;
+.footer-name {
+    color: var(--text-brand);
+    position: absolute;
+    bottom: var(--spacing-s);
+    align-self: flex-end;
 }
 
 /* Breakpoints */
@@ -515,13 +514,13 @@ footer img {
     footer {
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: var(--spacing-margin);
+        padding-right: var(--spacing-margin);
     }
 
     .footer-contact-info-container {
         border-left: none;
-        padding: 0px 0px;
+        padding: 0;
     }
 
     footer img {
@@ -532,5 +531,20 @@ footer img {
 @media (min-width: 950px) {
     .conclusion {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    nav {
+        height: 80px;
+    }
+
+    a.header-logo {
+        margin-right: var(--spacing-m);
+        width: 36px;
+    }
+
+    :root {
+       --spacing-margin: var(--spacing-m); 
     }
 }
