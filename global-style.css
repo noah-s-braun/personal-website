@@ -135,6 +135,7 @@ body {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: auto; /* Fixes thick fonts */
+    font-size: 16px;
 }
 
 /* Typography */
@@ -176,46 +177,46 @@ body {
 
 h1 {
     font-family: input-serif;
-    font-size: 56px;
-    line-height: 66px;
+    font-size: 3.5em;
+    line-height: 1.179em;
     letter-spacing: -0.05em;
     margin-top: 0px;
-    margin-bottom: 33px;
+    margin-bottom: 0.589em;
     color: var(--text-primary);
 }
 
 h2 {
     font-family: input-serif;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 2em;
+    line-height: 1.25em;
     letter-spacing: -0.05em;
-    margin-bottom: 20px;
+    margin-bottom: 0.625em;
     color: var(--text-primary);
 }
 
 p {
     font-family: inter;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1em;
+    line-height: 1.5em;
     letter-spacing: 0.03em;
     color: var(--text-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 0.75em;
 }
 
 caption {
     font-family: inter;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 0.75em;
+    line-height: 1.333em;
     letter-spacing: 0.03em;
     color: var(--text-secondary);
-    margin-bottom: 8px;
+    margin-bottom: 0.667em;
 }
 
 a {
     color: #1F2BC9;
     font-family: inter;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875em;
+    line-height: 1.4289em;
     letter-spacing: 0.03em;
     text-decoration: none;
 }
@@ -381,7 +382,7 @@ a {
         background-color: var(--surface-secondary);
         color: var(--text-secondary);
         white-space: nowrap;
-        font-size: 12px;
+        font-size: 0.75em;
         margin: 0 var(--spacing-xs) 6px 0;
         border-radius: var(--radius-m);
         backdrop-filter: blur(20px);
@@ -412,10 +413,13 @@ a {
     position: relative;
     left: var(--spacing-xs);
     margin: var(--spacing-m) auto;
+    border: none;
+    border-radius: 0;
 }
 
-.article-image video, .article-image img {
-    border-radius: calc(var(--radius-m));
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .text-layout {
@@ -545,5 +549,9 @@ footer img {
 
     :root {
        --spacing-margin: var(--spacing-m); 
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 }
