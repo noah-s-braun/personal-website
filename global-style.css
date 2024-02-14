@@ -449,6 +449,7 @@ article {
 
 .text-layout p {
     min-height: 4em;
+    max-width: 40em;
 }
 
 .article-number {
