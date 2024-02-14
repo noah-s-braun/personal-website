@@ -122,7 +122,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --spacing-xl: var(--spacing-6);
     --spacing-2xl: var(--spacing-9);
     --spacing-3xl: var(--spacing-13);
-    --spacing-margin: 10%;
+    --spacing-margin: var(--spacing-l);
 
     /* Radius */
     --radius-none: var(--spacing-0);
@@ -223,13 +223,10 @@ a {
 
 /* Components */
 
-    * {
-        transition: all ease-out 300ms;
-    }
-
     /* Buttons */
     a.button-primary, a.button-secondary {
         display: flex;
+        transition: 300ms ease-out;
     }
 
     a.button-primary:hover, a.button-secondary:hover {
@@ -397,24 +394,43 @@ a {
 
 /* Article */
 
-/* Title */
-.title-section {
-    background-color: var(--surface-brand);
-    padding: 90px var(--spacing-margin) 30px var(--spacing-margin);
+article {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: var(--spacing-margin);
+    overflow: visible;
 }
 
-.title-section h1, .title-section p, .title-section li {
+/* Title */
+.title-section {
+    padding: 90px 0 30px 0;
+    position: relative;
+}
+
+.title-section-background {
+    background-color: var(--surface-brand);
+    height: 100%;
+    width: 200vw;
+    position: absolute;
+    top: 0;
+    left: -50vw;
+    z-index: -1;
+}
+
+.title-section-content h1, .title-section-content p, .title-section-content li {
     color: var(--text-brand);
 }
 
 .article-image {
-    width: calc(100% - var(--spacing-xl));
+    width: 100%;
     max-width: 1000px;
+    max-height: 60vh;
+    object-fit: cover;
     position: relative;
-    left: var(--spacing-xs);
-    margin: var(--spacing-m) auto;
     border: none;
     border-radius: 0;
+    padding-top: 10px;
+    overflow: clip;
 }
 
 .grid-3 {
@@ -425,10 +441,12 @@ a {
 .text-layout {
     margin-top: var(--spacing-3xl);
     margin-bottom: var(--spacing-xl);
-    margin-left: var(--spacing-margin);
-    margin-right: var(--spacing-margin);
     max-width: 750px;
     position: relative;
+}
+
+.text-layout p {
+    min-height: 4em;
 }
 
 .article-number {
@@ -445,7 +463,7 @@ a {
 .conclusion {
     margin-bottom: var(--spacing-xl);
     border-top: 2px solid var(--border-primary);
-    margin: var(--spacing-3xl) var(--spacing-margin);
+    margin: var(--spacing-3xl) 0;
     padding: var(--spacing-xl) 0;
     display: grid;
     grid-column-gap: var(--spacing-l);
@@ -517,8 +535,6 @@ footer img {
     footer {
         flex-direction: column;
         align-items: flex-start;
-        padding-left: var(--spacing-margin);
-        padding-right: var(--spacing-margin);
     }
 
     .footer-contact-info-container {
@@ -549,6 +565,13 @@ footer img {
 
     :root {
        --spacing-margin: var(--spacing-m); 
+    }
+
+    .article-image {
+        width: 101vw;
+        position: relative;
+        left: -6vw;
+        padding-top: 0;
     }
 
     .grid-3 {
