@@ -398,7 +398,7 @@ a {
 article {
     max-width: 1080px;
     margin: 0 auto;
-    padding: var(--spacing-margin);
+    padding: 0 var(--spacing-margin);
     overflow: visible;
 }
 
