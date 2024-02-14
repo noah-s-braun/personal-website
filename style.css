@@ -1,7 +1,6 @@
 .work-cards-container {
     margin: 0 var(--spacing-margin);
     display: grid;
-    grid-template-columns: 1fr;
     grid-column-gap: var(--spacing-l);
     margin-bottom: 36px;
 }
@@ -17,6 +16,10 @@
     position: relative;
     left: 0;
     bottom: 0;
+    transition: 300ms ease-out;
+}
+
+.card-background {
     transition: 300ms ease-out;
 }
 

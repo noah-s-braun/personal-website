@@ -424,6 +424,7 @@ article {
 
 .article-image {
     width: 100%;
+    margin: 0 auto;
     max-width: 1000px;
     max-height: 60vh;
     object-fit: cover;
@@ -569,10 +570,9 @@ footer img {
     }
 
     .article-image {
-        width: 101vw;
-        position: relative;
-        left: -6vw;
+        width: 100vw;
         padding-top: 0;
+        margin-left: calc(var(--spacing-margin) * -1);
     }
 
     .grid-3 {
