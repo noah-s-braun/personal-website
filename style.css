@@ -1,5 +1,4 @@
 .work-cards-container {
-    margin: 0 var(--spacing-margin);
     display: grid;
     grid-column-gap: var(--spacing-l);
     margin-bottom: 36px;
