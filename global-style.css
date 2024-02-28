@@ -538,6 +538,7 @@ footer img {
     position: absolute;
     bottom: var(--spacing-s);
     align-self: flex-end;
+    font-size: 12px;
 }
 
 /* Breakpoints */
@@ -593,6 +594,7 @@ footer img {
 /* Scripting */
 .shadowbox {
     cursor: zoom-in;
+    max-width: 100vw;
 }
 
 .shadowbox.active {
