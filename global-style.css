@@ -330,9 +330,8 @@ a {
         background-color: color-mix(in srgb, var(--surface-primary) 80%, #FFFFFF00 20%);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        align-items: center;
-        justify-content: flex-start;
         z-index: 100;
+        justify-content: center;
     }
 
     nav img {
@@ -395,7 +394,7 @@ a {
 
 /* Article */
 
-article {
+.article-max-width {
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 var(--spacing-margin);
@@ -404,17 +403,23 @@ article {
 
 /* Title */
 .title-section {
-    padding: 90px 0 30px 0;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
     position: relative;
+}
+
+.title-section .title-section-content {
+    padding: 0 var(--spacing-margin);
 }
 
 .title-section-background {
     background-color: var(--surface-brand);
     height: 100%;
-    width: 200vw;
+    width: 100vw;
     position: absolute;
     top: 0;
-    left: -50vw;
     z-index: -1;
 }
 
@@ -425,9 +430,8 @@ article {
 .article-image {
     width: 100%;
     margin: 0 auto;
-    max-width: 1000px;
     max-height: 60vh;
-    object-fit: cover;
+    object-fit: contain;
     position: relative;
     border: none;
     border-radius: 0;
@@ -443,7 +447,6 @@ article {
 .text-layout {
     margin-top: var(--spacing-3xl);
     margin-bottom: var(--spacing-xl);
-    max-width: 750px;
     position: relative;
 }
 
@@ -465,11 +468,17 @@ article {
 
 .conclusion {
     margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl) var(--spacing-margin);
+    margin-top: var(--spacing-xl);
+}
+
+.conclusion-content {
+    margin: 0 var(--spacing-margin);
+    padding-top: var(--spacing-m);
     border-top: 2px solid var(--border-primary);
-    margin: var(--spacing-3xl) 0;
-    padding: var(--spacing-xl) 0;
     display: grid;
     grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-xs);
 }
 
 .conclusion-note {
@@ -529,6 +538,7 @@ footer img {
     position: absolute;
     bottom: var(--spacing-s);
     align-self: flex-end;
+    font-size: 12px;
 }
 
 /* Breakpoints */
@@ -551,7 +561,7 @@ footer img {
 }
 
 @media (min-width: 950px) {
-    .conclusion {
+    .conclusion-content {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -570,13 +580,39 @@ footer img {
        --spacing-margin: var(--spacing-m); 
     }
 
-    .article-image {
+    img.article-image {
         width: 100vw;
         padding-top: 0;
-        margin-left: calc(var(--spacing-margin) * -1);
+        padding: 0;
     }
 
     .grid-3 {
         grid-template-columns: 1fr;
     }
+}
+
+/* Scripting */
+.shadowbox {
+    cursor: zoom-in;
+    max-width: 100vw;
+}
+
+.shadowbox.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    cursor: zoom-out;
+}
+
+.shadowbox.active img, .shadowbox.active video {
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    margin: var(--spacing-s);
+    padding: 0 var(--spacing-m);
+    max-width: 100vw;
+    max-height: 90vh;
 }

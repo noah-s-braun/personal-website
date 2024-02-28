@@ -1,10 +1,25 @@
-function openMobileMenuPopup() {
-    document.getElementById('nav-mobile-menu-popup').style.display = 'flex';
-    document.getElementById('nav-mobile-menu').style.opacity = '0';
-    document.getElementById('nav-mobile-menu').style.transition = '0ms';
-}
-function closeMobileMenuPopup() {
-    document.getElementById('nav-mobile-menu-popup').style.display = 'none';
-    document.getElementById('nav-mobile-menu').style.opacity = '1';
-    document.getElementById('nav-mobile-menu').style.transition = '200ms';
-}
+$(document).ready(function(){
+
+  ////SHADOWBOX
+    //toggle '.active' on elements with '.shadowbox'
+    $('.shadowbox').on('click', function() {
+        const image = $(this);
+        console.log(image.width());
+        var standee = $('<div>');
+        standee.css('width', image.width());
+        standee.css('height', image.height());
+        standee.addClass('temporary');
+
+        //remove temporary elements
+        $('div.temporary').detach();
+
+        //switch shadowbox
+        $(this).toggleClass('active');
+
+        //if shadowbox is active, insert standee
+        if($(this).hasClass('active')) {
+            $(this).before(standee);
+        }
+    });
+
+});
