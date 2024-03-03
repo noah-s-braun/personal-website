@@ -22,4 +22,12 @@ $(document).ready(function(){
         }
     });
 
+    ////NO TRANSITION ON WINDOW RESIZE
+    $(window).on('resize', function(){
+        $('*').css('transition', '0s');
+    });
+    $(document).on('mouseenter', function(){
+        $('a.button-primary, a.button-secondary, .card, .card-background').css('transition', '300ms ease-out');
+    });
+
 });

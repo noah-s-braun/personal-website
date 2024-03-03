@@ -136,7 +136,7 @@ body {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: auto; /* Fixes thick fonts */
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 /* Typography */
@@ -169,20 +169,48 @@ body {
     src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 }
 
+@font-face {
+    font-family: inter, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}
+
 h1 {
     font-family: museo-slab;
     font-size: 3.5em;
     line-height: 1.179em;
-    margin-top: 0px;
-    margin-bottom: 0.589em;
+    margin-bottom: 0.5em;
     color: var(--text-primary);
+}
+
+span.light {
+    font-weight: 300;
 }
 
 h2 {
     font-family: museo-slab;
-    font-size: 2em;
+    font-size: 3em;
     line-height: 1.25em;
-    margin-bottom: 0.625em;
+    margin-bottom: 0.75em;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-family: museo-slab;
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.25em;
+    margin-bottom: 0.25em;
+    color: var(--text-primary);
+}
+
+h4 {
+    font-family: museo-slab;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.25em;
+    margin-bottom: 0.2em;
     color: var(--text-primary);
 }
 
@@ -193,6 +221,11 @@ p {
     letter-spacing: 0.03em;
     color: var(--text-secondary);
     margin-bottom: 0.75em;
+}
+
+p strong {
+    font-weight: 800;
+    letter-spacing: 0.05em;
 }
 
 caption {
@@ -247,6 +280,13 @@ a {
         background-position: top left;
         color: var(--text-primary);
         border: 2px solid var(--border-primary);
+    }
+
+    a.button-secondary.brand {
+        background: linear-gradient(0.45turn, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 100%);
+        color: var(--text-brand);
+        background-size: 200%;
+        background-position: top left;
     }
 
     a.button-secondary:hover {
@@ -350,7 +390,7 @@ a {
     .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
-    'wght' 400,
+    'wght' 700,
     'GRAD' 0,
     'opsz' 48;
     }
@@ -436,6 +476,10 @@ a {
     margin-top: var(--spacing-3xl);
     margin-bottom: var(--spacing-xl);
     position: relative;
+}
+
+.text-layout h2 {
+    font-size: 2em;
 }
 
 .text-layout p {
@@ -576,6 +620,11 @@ footer img {
 
     .grid-3 {
         grid-template-columns: 1fr;
+    }
+
+    .shadowbox.active img, .shadowbox.active video {
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 
