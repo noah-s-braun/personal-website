@@ -136,62 +136,81 @@ body {
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: auto; /* Fixes thick fonts */
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 /* Typography */
 
 @font-face {
-    font-family: "roc-grotesk-condensed", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    src: src;
-}
-
-@font-face {
     font-family: "input-serif", sans-serif;
     font-weight: 200;
     font-style: normal;
-    src: src;
+    src: url('https://use.typekit.net/jiy4ddc.css');
 }
 
 @font-face {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-family: museo-slab, serif;
+    font-weight: 300;
     font-style: normal;
-    src: src;
+    src: url('https://use.typekit.net/jiy4ddc.css');
 }
 
 @font-face {
-    font-family: "franklin-gothic-urw-comp", sans-serif;
-    font-weight: 400;
+    font-family: museo-slab, serif;
+    font-weight: 700;
     font-style: normal;
-    src: src;
+    src: url('https://use.typekit.net/jiy4ddc.css');
 }
 
 @font-face {
-    font-family: "franklin-gothic-urw", sans-serif;
+    font-family: inter, sans-serif;
     font-weight: 400;
     font-style: normal;
-    src: src;
+    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}
+
+@font-face {
+    font-family: inter, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 }
 
 h1 {
-    font-family: input-serif;
+    font-family: museo-slab;
     font-size: 3.5em;
     line-height: 1.179em;
-    letter-spacing: -0.05em;
-    margin-top: 0px;
-    margin-bottom: 0.589em;
+    margin-bottom: 0.5em;
     color: var(--text-primary);
 }
 
+span.light {
+    font-weight: 300;
+}
+
 h2 {
-    font-family: input-serif;
-    font-size: 2em;
+    font-family: museo-slab;
+    font-size: 3em;
     line-height: 1.25em;
-    letter-spacing: -0.05em;
-    margin-bottom: 0.625em;
+    margin-bottom: 0.75em;
+    color: var(--text-primary);
+}
+
+h3 {
+    font-family: museo-slab;
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.25em;
+    margin-bottom: 0.25em;
+    color: var(--text-primary);
+}
+
+h4 {
+    font-family: museo-slab;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.25em;
+    margin-bottom: 0.2em;
     color: var(--text-primary);
 }
 
@@ -202,6 +221,11 @@ p {
     letter-spacing: 0.03em;
     color: var(--text-secondary);
     margin-bottom: 0.75em;
+}
+
+p strong {
+    font-weight: 800;
+    letter-spacing: 0.05em;
 }
 
 caption {
@@ -256,6 +280,13 @@ a {
         background-position: top left;
         color: var(--text-primary);
         border: 2px solid var(--border-primary);
+    }
+
+    a.button-secondary.brand {
+        background: linear-gradient(0.45turn, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 100%);
+        color: var(--text-brand);
+        background-size: 200%;
+        background-position: top left;
     }
 
     a.button-secondary:hover {
@@ -359,7 +390,7 @@ a {
     .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
-    'wght' 400,
+    'wght' 700,
     'GRAD' 0,
     'opsz' 48;
     }
@@ -447,6 +478,10 @@ a {
     position: relative;
 }
 
+.text-layout h2 {
+    font-size: 2em;
+}
+
 .text-layout p {
     min-height: 4em;
     max-width: 40em;
@@ -479,7 +514,7 @@ a {
 }
 
 .conclusion-note {
-    font-family: "input-serif";
+    font-family: "museo-slab";
 }
 
 .conclusion-buttons {
@@ -585,6 +620,11 @@ footer img {
 
     .grid-3 {
         grid-template-columns: 1fr;
+    }
+
+    .shadowbox.active img, .shadowbox.active video {
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 
