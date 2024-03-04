@@ -35,7 +35,7 @@ $(document).ready(function() {
         //assemble button
         footerButton[i] = $('<a>');
         footerButton[i].addClass(['button-secondary', 'button-small', 'brand']);
-        footerButton[i].attr('href', );
+        footerButton[i].attr('href', href);
         footerButton[i].append(iconSpan);
         footerButton[i].append(text);
     }
