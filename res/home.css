@@ -32,6 +32,14 @@
     color: var(--text-brand);
 }
 
+.hero-slide p {
+    margin-bottom: var(--spacing-l);
+}
+
+.hero-slide a {
+    display: inline-block;
+}
+
 .home-slide-heading {
     display: flex;
     align-items: center;
@@ -110,12 +118,11 @@
 
 .case-study-cards-container, .mini-project-cards-container {
     display: grid;
-    grid-column-gap: var(--spacing-l);
+    grid-column-gap: var(--spacing-s);
     margin-bottom: 36px;
 }
 
 .card {
-    width: 97%;
     padding: var(--spacing-l);
     background-color: white;
     display: flex;
@@ -213,13 +220,9 @@ body {
     min-height: calc(100vh - 283px);
 }
 
-@media (min-width: 950px) {
+@media (min-width: 700px) {
     .case-study-cards-container {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .case-study-card {
-        width: 100%;
     }
 }
 

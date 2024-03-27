@@ -332,7 +332,7 @@ a {
         overflow: show;
         position: relative;
         border-radius: var(--radius-m);
-        margin: var(--spacing-m);
+        margin: var(--spacing-s);
     }
 
     .card-background {

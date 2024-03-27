@@ -29,5 +29,22 @@ $(document).ready(function(){
     $(document).on('mouseenter', function(){
         $('a.button-primary, a.button-secondary, .card, .card-background').css('transition', '300ms ease-out');
     });
+    
+    //Scroll function for cta
+    function scrollTo(triggerID, targetID, offset) {
+        const trigger = $(`#${triggerID}`);
+        const target = $(`#${targetID}`);
+        const targetOffset = target.offset();
+        let targetScroll = targetOffset.top + offset;
+        console.log(targetScroll);
+        trigger.on('click', function(e) {
+            console.log('clicked');
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: targetScroll
+            }, 500)
+        })
+    }
 
+    scrollTo('cta', 'work-slide', -30);
 });
