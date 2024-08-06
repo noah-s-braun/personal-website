@@ -18,10 +18,6 @@ $(document).ready(function() {
         icon: 'email',
         text: 'imaginoah@icloud.com',
         href: 'mailto:imaginoah@icloud.com?subject=Message%20From%20A%20Wonderful%20Person'
-    }, {
-        icon: 'call',
-        text: '<span>314.</span><span>498.</span><span>3917</span>',
-        href: ''
     }];
 
     for(let i = 0; i < footerButton.length; i ++) {
