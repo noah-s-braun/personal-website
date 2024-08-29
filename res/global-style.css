@@ -455,6 +455,10 @@ a {
     color: var(--text-brand);
 }
 
+.title-section-content .additional-info {
+    font-size: 12px;
+}
+
 .article-image {
     width: 100%;
     margin: 0 auto;
@@ -470,6 +474,7 @@ a {
 .grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--spacing-s);
 }
 
 .text-layout {
