@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     //byline
     const footerByline = $('<p>');
-    footerByline.append('Designed and built by Noah Scott Braun');
+    footerByline.append('Designed and coded from scratch by Noah Scott Braun');
     footerByline.addClass('footer-name');
 
 
